@@ -1,0 +1,234 @@
+[
+  {
+  "question": "Perabot rumah apa yang sering dipindah-pindah.",
+  "answer": [
+    "Kursi",
+    "Lemari",
+    "Meja",
+    "Tempat Tidur"
+  ]
+},
+  {
+    "question": "Pujian apa yang diberikan orangtua saat anak lelakinya tidak berambut gondrong lagi.",
+    "answer": [
+      "Ganteng",
+      "Bersih",
+      "Rapi",
+      "Macho",
+      "Bagus",
+      "Keren"
+    ]
+  },
+  {
+    "question": "Bagaimana cara mendekati orang yang ditaksir.",
+    "answer": [
+      "Chat",
+      "Ngobrol",
+      "Beri Perhatian",
+      "Rayu",
+      "Menyapa",
+      "Minta Kenalan",
+      "Antar Pulang"
+    ]
+  },
+  {
+    "question": "Sebutkan sesuatu yang dapat meleleh.",
+    "answer": [
+      "Lilin",
+      "Es",
+      "Mentega",
+      "Plastik",
+      "Cokelat"
+    ]
+  },
+  {
+    "question": "Apa yang dilakukan sambil menunggu antrian supermarket.",
+    "answer": [
+      "Main HP",
+      "Melihat – Lihat",
+      "Ngobrol",
+      "Cek Uang",
+      "Cek Belanjaan",
+      "Diam Saja"
+    ]
+  },
+  {
+    "question": "Apa yang majikan tanyakan kepada pembantu setelah pulang.",
+    "answer": [
+      "Masak Apa",
+      "Anak-Anak",
+      "Keadaan Rumah",
+      "Surat",
+      "Ada Tamu",
+      "Suami"
+    ]
+  },
+  {
+    "question": "Kegiatan apa yang dilakukan luar rumah masih pakai piyama",
+    "answer": [
+      "Belanja",
+      "Siram Tanaman",
+      "Jemur Baju",
+      "Ngobrol",
+      "Olahraga"
+    ]
+  },
+  {
+    "question": "Hewan apa yang berwajah seram.",
+    "answer": [
+      "Harimau",
+      "Gorila",
+      "Monyet",
+      "Iguana",
+      "Buaya",
+      "Serigala"
+    ]
+  },
+  {
+    "question": "Mengapa rumah sulit untuk dijual.",
+    "answer": [
+      "Mahal",
+      "Lokasi",
+      "Angker",
+      "Selalu Banjir",
+      "Tidak Terawat",
+      "Surat Tidak Lengkap",
+      "Lingkungan Tidak Baik"
+    ]
+  },
+  {
+    "question": "Sebutkan benda bocor bisa bermasalah.",
+    "answer": [
+      "Genteng",
+      "Gas",
+      "Pipa",
+      "Kondom"
+    ]
+  },
+  {
+    "question": "Gambar yang terdapat di kalender?",
+    "answer": [
+      "Wanita",
+      "Arts",
+      "Kendaraan",
+      "Hewan"
+    ]
+  },
+  {
+    "question": "Apa yang biasanya ditaruh di saku?",
+    "answer": [
+      "Dompet",
+      "HP",
+      "Buku",
+      "Permen"
+    ]
+  },
+  {
+    "question": "Bekal makan anak sekolah?",
+    "answer": [
+      "Mie",
+      "Nasi goreng",
+      "Roti",
+      "Nasi uduk"
+    ]
+  },
+  {
+    "question": "Yang dilakukan setelah gajian?",
+    "answer": [
+      "Belanja",
+      "Bayar hutang",
+      "Cek saldo",
+      "Menabung"
+    ]
+  },
+  {
+    "question": "Penyebab prestasi atlet menurun",
+    "answer": [
+      "Usia",
+      "Malas",
+      "Kesehatan menurun",
+      "Cedera"
+    ]
+  },
+  {
+    "question": "Di film horor setan, dimana setan muncul?",
+    "answer": [
+      "Toilet",
+      "Kaca",
+      "Pohon",
+      "Kuburan"
+    ]
+  },
+  {
+    "question": "Dimana saja sering macet?",
+    "answer": [
+      "Pasar",
+      "Perempatan",
+      "Terminal",
+      "Lampu lalu lintas"
+    ]
+  },
+  {
+    "question": "Kegiatan apa yang dilakukan sebelum berenang?",
+    "answer": [
+      "Pemanasan",
+      "Mandi",
+      "Tidur",
+      "Makan"
+    ]
+  },
+  {
+    "question": "Barang apa yang sering kehilangan?",
+    "answer": [
+      "HP",
+      "Uang",
+      "Dompet",
+      "Cincin"
+    ]
+  },
+  {
+    "question": "Barang apa yang berserakan setelah pesta?",
+    "answer": [
+      "Sampah makanan",
+      "Piring",
+      "Gelas",
+      "Botol"
+    ]
+  },
+  {
+    "question": "Cewek materialistis suka ngelihat cowok dari apanya?",
+    "answer": [
+      "Mobil",
+      "Kantong",
+      "Dompet",
+      "Duit"
+    ]
+  },
+  {
+    "question": "Jenis-jenis cewek yang didemenin para cowok?",
+    "answer": [
+      "Cantik",
+      "Seksi",
+      "Manis",
+      "Manja"
+    ]
+  },
+  {
+    "question": "Bunyi suara hewan yang didengarkan orangtua ke anak?",
+    "answer": [
+      "Meong",
+      "Mbek",
+      "Guk guk",
+      "Kukuryuuk"
+    ]
+  },
+  {
+    "question": "Kegiatan yang dilakukan beramai-ramai di meja",
+    "answer": [
+      "Makan",
+      "Rapat",
+      "Main kartu",
+      "Arisan"
+    ]
+  }
+]

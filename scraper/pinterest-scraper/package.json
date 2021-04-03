@@ -1,0 +1,58 @@
+{
+  "_from": "pinterest-scraper",
+  "_id": "pinterest-scraper@0.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-8qggmQ6iLYeLgVmbwG6GDldq8lsJtjDLr24RjcBAOMb/hPUnLc6o50e6rKA6yHzE6WP013GNXagoQI96APIvKw==",
+  "_location": "/pinterest-scraper",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "pinterest-scraper",
+    "name": "pinterest-scraper",
+    "escapedName": "pinterest-scraper",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/pinterest-scraper/-/pinterest-scraper-0.0.2.tgz",
+  "_shasum": "abae2d22fcf51afd90afad3f03832f6d9e0be114",
+  "_spec": "pinterest-scraper",
+  "_where": "/data/data/com.termux/files/home/useless",
+  "author": {
+    "name": "Kristóf-Attila Kovács"
+  },
+  "bugs": {
+    "url": "https://github.com/kkristof200/ts-pinterest-scraper/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@types/node": "^14.11.2",
+    "axios": "^0.20.0",
+    "typescript": "^4.0.3"
+  },
+  "deprecated": false,
+  "description": "```bash npm i pinterest-scraper ``` ## Usage ```typescript ```",
+  "homepage": "https://github.com/kkristof200/ts-pinterest-scraper#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "name": "pinterest-scraper",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkristof200/ts-pinterest-scraper.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.0.2"
+}
