@@ -160,12 +160,10 @@ client.handler = async function (m) {
         let _args = noPrefix.trim().split` `.slice(1)
         let text = _args.join` `
   		  command = (command || '').toLowerCase()
-        console.log(command)
         let isOwner = global.ownerNumber.includes(m.sender) || m.key.fromMe
   			let isAccept = plugin.command instanceof RegExp ? plugin.command.test(command) :
         plugin.command instanceof Array ? plugin.command.includes(command) :
         plugin.command instanceof String ? plugin.command == command : false
-        console.log(isAccept)
   			if (!isAccept) continue
         let isMods = isOwner || m.key.fromMe
         let isPrems = isOwner || global.DB['users'].find(u => u.jid == m.sender).pro
