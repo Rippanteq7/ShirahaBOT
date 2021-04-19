@@ -1,18 +1,22 @@
-let { exec } = require("child_process")
-let util = require('util')
-let handler = async (m, { client, command, text, usedPrefix }) => {
+let cp = require('child_process')
+let { promisify } = require('util')
+let exec = promisify(cp.exec).bind(cp)
+
+let handler = async (m, { client, isOwner, command, text }) => {
   if (global.client.user.jid != client.user.jid) return
- // let term = execSync(command.trimStart()  + ' ' + text.trimEnd())
-  exec(command.trimStart() + ' ' + text.trimEnd(),(err, stdin,stdout,stderr) => {
-    if (err) return m.reply(util.format(err))
-    else if (stdout) return m.reply(util.format(stdout))
-    else if (stdin) return m.reply(util.format(stdin))
-    else if (stderr) return m.reply(util.format(stderr))
-    else return console.log('unknown response')
-  })
-  
+  m.reply('```Executing codes...```')
+  let o
+  try {
+    o = await exec(command.trimStart()  + ' ' + text.trimEnd())
+  } catch (e) {
+    o = e
+  } finally {
+    let { stdout, stderr } = o
+    if (stdout.trim()) m.reply(stdout)
+    if (stderr.trim()) m.reply(stderr)
+  }
 }
-handler.customPrefix = new RegExp('^[$\^]')
+handler.customPrefix = /^[$] /
 handler.command = new RegExp
-handler.owner = true
+handler.rowner = true
 module.exports = handler
