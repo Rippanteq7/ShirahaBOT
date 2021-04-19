@@ -1,3 +1,5 @@
+//INIT
+require('./config.js')
 let { WAConnection: _WAConnection, WA_MESSAGE_STUB_TYPES } = require('@adiwajshing/baileys')
 let { generate } = require('qrcode-terminal')
 let qrcode = require('qrcode')
@@ -32,8 +34,7 @@ mongoose.connect(dataURI, {
 const PORT = process.env.PORT || 3000
 let opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
 global.opts = Object.freeze({...opts})
-global.prefix =  new RegExp('^[!]')
-global.ownerNumber = ['6285856408596@s.whatsapp.net',]
+let ownerNumber = global.owner.map(v=> v + '@s.whatsapp.net')
 let authFile = 'session.json'
 global.client = new WAConnection()
 client.regenerateQRIntervalMs = null
@@ -79,8 +80,8 @@ client.handler = async function (m) {
   	simple.smsg(this, m)
     m.exp = 0
     m.limit = false
-    if (!global.ownerNumber.includes(m.sender) && opts['devmode']) return
-    m.isOwner = global.ownerNumber.includes(m.sender)
+    if (!ownerNumber.includes(m.sender) && opts['devmode']) return
+    m.isOwner = ownerNumber.includes(m.sender)
     if (!m.text)  return
     if (m.isBaileys) return
     if (global.DB['users'].find(user => user.jid == m.sender) && global.DB['users'].find(v => v.jid == m.sender).isBanned && !global.ownerNumber.includes(m.sender))return
@@ -134,6 +135,11 @@ client.handler = async function (m) {
                  this.reply(m.chat, teksAfk.trim(), m)
               }
            }
+        } else if (m.quoted && m.quoted.sender && userAfk.includes(m.quoted.sender)) {
+                 let user =  global.DB['groups'].find(v=> v.jid == m.chat).members.find(v=> v.jid == m.quoted.sender)
+                 let teksAfk = `Kak *${this.getName(m.quoted.sender)}*, Sedang afk sekarang\n`
+                 if (user.afkReason && user.afkReason.length > 0) teksAfk += `Katanya, *${user.afkReason.trim()}*`
+                 this.reply(m.chat, teksAfk.trim(), m)
         }
         if (userAfk.includes(m.sender)) {
          let user = global.DB['groups'].find(u => u.jid == m.chat).members.find(u => u.jid == m.sender)
@@ -150,7 +156,7 @@ client.handler = async function (m) {
   	for (let name in global.plugins) {
   	  let plugin = global.plugins[name]
       if (!plugin) continue
-      let _prefix = plugin.customPrefix ? plugin.customPrefix : global.prefix  ? global.prefix : m.isGroup && global.DB['groups'].find(v=>v.jid==m.chat).prefix ? new RegExp('^[' + global.DB['groups'].find(v=>v.jid == m.chat).prefix + ']') : global.prefix
+      let _prefix = plugin.customPrefix ? plugin.customPrefix :  m.isGroup && global.DB['groups'].find(v=>v.jid==m.chat).prefix ? new RegExp('^[' + global.DB['groups'].find(v=>v.jid == m.chat).prefix + ']') : global.prefix
   	  // console.log(_prefix);
       // console.log(_prefix.test(m.text));
       usedPrefix = (_prefix.exec(m.text) || '')[0]
@@ -160,7 +166,7 @@ client.handler = async function (m) {
         let _args = noPrefix.trim().split` `.slice(1)
         let text = _args.join` `
   		  command = (command || '').toLowerCase()
-        let isOwner = global.ownerNumber.includes(m.sender) || m.key.fromMe
+        let isOwner = ownerNumber.includes(m.sender) || m.key.fromMe
   			let isAccept = plugin.command instanceof RegExp ? plugin.command.test(command) :
         plugin.command instanceof Array ? plugin.command.includes(command) :
         plugin.command instanceof String ? plugin.command == command : false
@@ -208,8 +214,7 @@ client.handler = async function (m) {
 
         m.isCommand = true
         let xp = 'exp' in plugin ? parseInt(plugin.exp) : 9
-        if (xp > 99) m.reply('Ngecit -_-')
-        else m.exp += xp
+        m.exp += xp
         if (!isPrems && global.DB['users'].find(v=>v.jid == m.sender).limit < 1 && plugin.limit) {
           this.reply(m.chat, `Limit kamu habis!, kamu bisa beli melalui *${usedPrefix}buylimit* atau bisa menunggu sampai limit direset!\nJam limit direset: 00:00 WIB`, m)
           continue
