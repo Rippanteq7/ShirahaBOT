@@ -1,6 +1,6 @@
 
 
-let owner = global.ownerNumber[0]
+let owner = global.owner[0] + '@s.whatsapp.net'
 let handler = async (m, { client, args }) => {
   let userData = global.DB['users'].sort((a,b) => b.exp - a.exp )
   let sortedExp = userData.filter(v=> v.jid !== owner)
