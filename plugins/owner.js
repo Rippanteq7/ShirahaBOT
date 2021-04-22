@@ -6,7 +6,7 @@ let handler = async(m, {client}) => {
   + 'VERSION:3.0\n'
   + 'FN:RRuLL\n' // full name 
   + 'ORG:Loli hunter;\n' // the organization of the contact
-  + 'TEL;type=CELL;type=VOICE;waid=' + global.ownerNumber[0].split('@')[0] + ':' + PhoneNumber(`+${global.ownerNumber[0].split('@')[0]}`).getNumber('International') + '\n' // WhatsApp ID + phone number
+  + 'TEL;type=CELL;type=VOICE;waid=' + global.owner[0] + ':' + PhoneNumber(`+${global.owner[0]}`).getNumber('International') + '\n' // WhatsApp ID + phone number
   + 'END:VCARD'
   client.sendMessage(m.chat, {displayname: 'RRuLL',vcard: vcard }, MessageType.contact, {quoted: m})
 }

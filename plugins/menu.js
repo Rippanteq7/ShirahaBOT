@@ -1,4 +1,3 @@
-
 let tags = {
   'help': ' *MENU* ',
   'main': ' *BOT* ',
@@ -57,7 +56,7 @@ let handler  = async (m, { client, usedPrefix: _p, command}) => {
         if (menu.tags && menu.tags.includes(tag))
           if (menu.help) groups[tag].push(menu)
     }
-    let before =  `Hai, *%name*!\nNamaku *${client.getName(client.user.jid)}*\n_Uptime Bot: *%uptime*_\n`
+    let before =  `Hai, *%name*!\nNamaku *${client.getName(client.user.jid)}*\n_Uptime Bot: *%uptime*_\nPrefix bot di group ini: *${global.DB.groups.find(v=> v.jid === m.chat).prefix}*\n`
     let header =  '╭─『%category』 '
     let body   =  '│➸ _%cmd_'
     let footer =  '╰────\n'

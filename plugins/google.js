@@ -12,7 +12,7 @@ let handler = async (m, { client, command, args, text }) => {
     + `_${gugle.snippet}_\n`
     + `${gugle.link}\n________________________\n`
   }
-  let ss = `http://rrull-api.herokuapp.com/ssweb?url=${url}&fulll=${full}`
+  let ss = `http://api-rull.herokuapp.com/api/ssweb?url=${url}&fulll=${full}`
   client.sendFile(m.chat, ss, 'screenshot.png', url + '\n\n' + msg, m)
 }
 handler.help = ['google'].map(v => v + ' <pencarian>')
@@ -30,4 +30,3 @@ handler.botAdmin = false
 handler.fail = null
 
 module.exports = handler
-
