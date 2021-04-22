@@ -242,7 +242,7 @@ client.handler = async function (m) {
           else {
             console.log(e)
             this.reply(m.chat, monospace('[❗] Terjadi kesalahan mungkin disebabkan oleh system!'), m)
-            this.reply(global.ownerNumber[0], util.format(e), m)
+            this.reply(ownerNumber[0], util.format(e), m)
           }
         } finally {
           if (m.limit == true && global.DB['users'].find(v => v.jid == m.sender)) global.DB['users'].find(v=> v.jid == m.sender).limit -= m.limit * 1

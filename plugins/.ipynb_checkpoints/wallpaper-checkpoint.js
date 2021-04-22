@@ -10,7 +10,7 @@ let handler = async(m, {client, text, args, usedPrefix, command}) => {
       let q = arg  ? arg[0] : text
       q = encodeURIComponent(q.replace(/ /g, '+'))
       let x = arg && arg[1] && !isNaN(parseInt(arg[1])) ? parseInt(arg[1]) : 1
-      if (x >= 3) throw 'Request terlalu banyak max 2!'
+      if (x > 5) throw 'Request terlalu banyak max 5!'
       let walls = (await axios.get(`https://wall.alphacoders.com/api2.0/get.php?auth=3e7756c85df54b78f934a284c11abe4e&method=search&term=${q}`)).data
       if (walls.wallpapers.length == 0) throw 'Wallpaper tidak dapat kami termukan!'
        for (let i = 0; i < x; i+=1) {
