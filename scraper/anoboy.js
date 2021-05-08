@@ -1,6 +1,6 @@
 const request = require('request');
 const cheerio = require('cheerio');
-const baseUrl = 'https://anoboy.tube/'
+const baseUrl = 'https://anoboy.media/'
 const fakeUa = require('fake-useragent')
 
 
